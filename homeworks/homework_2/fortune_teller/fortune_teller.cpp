@@ -29,9 +29,9 @@ int main()
     std::cout << "Please enter the time of year when you were born: " << std::endl;
     std::cout << "(pick from 'spring', 'summer', 'autumn', 'winter')";
     // A little trick to move the curser 1 line up 1A and down 1B
-    std::cout << "\033[1A";
+    //std::cout << "\033[1A";
     std::cin >> user_season;
-    std::cout << "\033[1B";
+    //std::cout << "\033[1B";
 
     std::cout << "Please enter an adjective: ";
     std::cin >> user_adjective[0];
