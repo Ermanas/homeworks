@@ -23,7 +23,7 @@ int main()
 
     std::cout << "Welcome to the fortune teller program!" << std::endl;
 
-    std::cout << "Please enter your name: " << std::endl;
+    std::cout << "Please enter your name:" << std::endl;
     std::cin >> user_name;
 
     std::cout << "Please enter the time of year when you were born:" << std::endl;
