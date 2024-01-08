@@ -23,24 +23,26 @@ int main()
 
     std::cout << "Welcome to the fortune teller program!" << std::endl;
 
-    std::cout << "Please enter your name: ";
+    std::cout << "Please enter your name: " << std::endl;
     std::cin >> user_name;
 
     std::cout << "Please enter the time of year when you were born: " << std::endl;
-    std::cout << "(pick from 'spring', 'summer', 'autumn', 'winter')";
+    std::cout << "(pick from 'spring', 'summer', 'autumn', 'winter')" << std::endl;
     // A little trick to move the curser 1 line up 1A and down 1B
     //std::cout << "\033[1A";
     std::cin >> user_season;
     //std::cout << "\033[1B";
 
-    std::cout << "Please enter an adjective: ";
+    std::cout << "Please enter an adjective: " << std::endl;
     std::cin >> user_adjective[0];
 
-    std::cout << "Please enter another adjective: ";
+    std::cout << "Please enter another adjective: " << std::endl;
     std::cin >> user_adjective[1];
 
     selected_adjective = user_adjective[user_name.size() % user_adjective.size()];
-
+    
+    std::cout << std::endl;
+    std::cout << "Here is your description:" << std::endl;
     std::cout << user_name << ", ";
     std::cout << "the " << selected_adjective << " ";
     std::cout << seasons[user_season] << " ";
