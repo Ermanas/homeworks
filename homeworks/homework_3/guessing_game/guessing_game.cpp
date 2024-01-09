@@ -16,10 +16,10 @@ int main()
     std::cout << "Welcome to the GUESSING GAME!" << std::endl;
     std::cout << "I will generate a number and you will guess it!" << std::endl;
 
-    std::cout << "Please provide the smallest number: " << std::endl;
+    std::cout << "Please provide the smallest number:" << std::endl;
     // Get the range from the user
     std::cin >> rangeMin;
-    std::cout << "Please provide the largest number: " << std::endl;
+    std::cout << "Please provide the largest number:" << std::endl;
     std::cin >> rangeMax;
 
     // Create the range with the user inputs:
