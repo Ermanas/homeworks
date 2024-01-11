@@ -9,7 +9,7 @@ set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 # My Include Directory
-include_directories(${PROJECT_SOURCE_DIR}/no_strings_attached)
+include_directories(${PROJECT_SOURCE_DIR})
 # My Library Directory
 add_subdirectory(${PROJECT_SOURCE_DIR}/no_strings_attached)
 # My Examples Directory
