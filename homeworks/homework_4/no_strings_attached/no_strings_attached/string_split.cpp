@@ -8,6 +8,12 @@ namespace no_strings_attached
         std::vector<std::string> splittedString;
         std::size_t position = 0;
         std::size_t initPos = 0;
+        
+        if (delimiter == "")
+        {
+            splittedString.emplace_back(str);
+            return splittedString;
+        }
 
         while (position != std::string::npos)
         {
