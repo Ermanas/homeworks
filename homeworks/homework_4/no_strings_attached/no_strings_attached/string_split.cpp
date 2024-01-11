@@ -1,31 +1,35 @@
 #include "string_split.h"
 
-std::vector<std::string> Split(const std::string &str, const std::string &delimiter)
+namespace no_strings_attached
 {
-    std::vector<std::string> splittedString;
-    std::size_t position = 0;
-    std::size_t initPos = 0;
 
-    while (position != std::string::npos)
+    std::vector<std::string> Split(const std::string &str, const std::string &delimiter)
     {
-        position = str.find(delimiter, initPos);
-        // When the position return npos, substr function will return
-        // from the last position to the end. It does not matter even
-        // exceed the string size like you can write strpos(init, 9999999)
-        splittedString.emplace_back(str.substr(initPos, position - initPos));
-        initPos = position + delimiter.size();
+        std::vector<std::string> splittedString;
+        std::size_t position = 0;
+        std::size_t initPos = 0;
+
+        while (position != std::string::npos)
+        {
+            position = str.find(delimiter, initPos);
+            // When the position return npos, substr function will return
+            // from the last position to the end. It does not matter even
+            // exceed the string size like you can write strpos(init, 9999999)
+            splittedString.emplace_back(str.substr(initPos, position - initPos));
+            initPos = position + delimiter.size();
+        }
+
+        return splittedString;
     }
 
-    return splittedString;
-}
-
-std::vector<std::string> Split(const std::string &str, const std::string &delimiter, int number_of_chunks_to_keep)
-{
-    std::vector<std::string> firstSplit = Split(str, delimiter);
-    
-    while (static_cast<int>(firstSplit.size()) > number_of_chunks_to_keep && !firstSplit.empty())
+    std::vector<std::string> Split(const std::string &str, const std::string &delimiter, int number_of_chunks_to_keep)
     {
-        firstSplit.pop_back();
+        std::vector<std::string> firstSplit = Split(str, delimiter);
+
+        while (static_cast<int>(firstSplit.size()) > number_of_chunks_to_keep && !firstSplit.empty())
+        {
+            firstSplit.pop_back();
+        }
+        return firstSplit;
     }
-    return firstSplit;
 }

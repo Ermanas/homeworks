@@ -1,6 +1,8 @@
 #include <iostream>
 #include "no_strings_attached/string_split.h"
 
+using namespace no_strings_attached;
+
 int main()
 {
     std::cout << "Example program that splits strings." << std::endl;
